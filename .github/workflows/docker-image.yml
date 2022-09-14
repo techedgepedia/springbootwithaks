@@ -16,8 +16,8 @@ jobs:
       - uses: azure/docker-login@v1
         with:
            login-server: springbootcr.azurecr.io
-           username: ${{ secrets.ACR_USERNAME }}
-           password: ${{ secrets.ACR_PASSWORD }}
+           username: springbootcr
+           password: 8BjWg1EFq2TwKf+o4AaJrxJAD2kv3DWH
       - run: |
           docker build . -t springbootcr.azurecr.io/knowledgefactory:${{ github.sha }}
           docker push springbootcr.azurecr.io/knowledgefactory:${{ github.sha }}
